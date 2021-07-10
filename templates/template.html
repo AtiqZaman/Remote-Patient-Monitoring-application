@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+ <head>
+
+
+
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+     <!--    -->
+
+     <meta charset="utf-8">
+     <link rel="stylesheet" href="{{ url_for('static',     filename='css/template.css') }}">
+
+
+
+
+ </head>
+
+ <body>
+
+
+    <div class="jumbotron text-center" style="background-color:rgb(255,255,255);color:DodgerBlue; margin-bottom:0; height: 40px">
+       <img src="/static/logo.png" alt="Health Care" width="150" height="150" style="float:left; margin:-50px 40px">
+        <h2 style="text-align:center; margin-top:-20px; margin:-20px 230px">Remote Patient Monitoring</h2>
+        <img src="/static/signupicon.png" alt="Health Care" width="70" height="70" style="color:DodgerBlue; float:right;  margin:-10px 40px">
+    </div>
+
+    <div class="btn-group btn-group-justified" style=" padding-left: 300px; padding-right: 200px; ">
+        <a href="{{ url_for('home') }}" class="btn btn-primary">Home</a>
+        <a href="{{ url_for('family') }}" class="btn btn-primary">Family</a>
+        <a href="{{ url_for('doctor') }}" class="btn btn-primary">Doctor</a>
+        <a href="{{ url_for('alerts') }}" class="btn btn-primary">Alerts</a>
+        <a href="{{ url_for('KVSmediaViewer') }}" class="btn btn-primary">KVSmediaViewer</a>
+    </div>
+
+
+
+    {% block content %}
+    {% endblock %}
+
+ </body>
+</html>
